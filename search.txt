@@ -1,0 +1,97 @@
+### GRAFIKKARTEN ###
+GTX 1050
+GTX 1060
+GTX 1070
+GTX 1080
+GTX 1650
+GTX 1660
+RTX 2080
+RTX 3060
+RTX 3080
+RX 570
+RX 580
+RX 5500
+RX 6600
+RX 6700
+RX 6800
+RX 6900
+
+### INTEL LGA1200 ###
+i5 10400
+i5 10505
+i5 10500
+i5 10600
+i5 11400
+i5 11500
+i5 11600
+i7 10700
+i7 11700
+Xeon W-1270
+Xeon W-1290
+Xeon E-2336
+Xeon E-2356G
+Xeon E-2378
+Xeon E-2388G
+
+### INTEL LGA1151 ###
+i7 8700
+Xeon E-2246G
+Xeon E-2276G
+Xeon E-2278G
+Xeon E-2286G
+Xeon E-2288G
+
+### AMD ###
+Athlon 3000G
+Athlon 3050GE
+Athlon 3150G
+Ryzen 3 2200G
+Ryzen 3 3200G
+Ryzen 3 4300G
+Ryzen 3 5300G
+Ryzen 5 3600
+Ryzen 5 4600G
+Ryzen 5 5600G
+Ryzen 5 5600X
+Ryzen 7 3800
+Ryzen 7 4700
+Ryzen 7 5700G
+Ryzen 7 5800
+Ryzen 7 5800X
+Ryzen 9 3900
+Ryzen 9 5900
+Ryzen 9 5950
+Ryzen Threadripper 3990
+
+### MAINBOARDS ###
+1200 Mainboard
+1151 Mainboard
+sTRX4 Mainboard
+AM4 Mainboard
+
+### AMD Mainboards ### 
+# 500 Series not compatiple with: Athlon
+# X570 is the only compatiple Board for Onboard Graphics on 3000 series CPUs (except 400 series Mainboards)
+X570 Mainboard #Zen3 compatiple 
+B550 Mainboard #Zen3 compatiple 
+A520 Mainboard #Zen3 compatiple
+X470 Mainboard #Zen3 compatiple
+B450 Mainboard #Zen3 compatiple
+
+### Netzteile ###
+Netzteil 80PLUS
+Corsair 600W
+be quiet 600W
+seasonic 600W
+
+### SWITCHE ###
+GSwitch POE 24 Port
+Gigabit Switch 24 Port
+Gigabit Switch 48 Port
+GSwitch 24 Port
+GSwitch 48 Port
+
+### Monitor ###
+4K Monitor
+21:9 Monitor
+34+Zoll Monitor
