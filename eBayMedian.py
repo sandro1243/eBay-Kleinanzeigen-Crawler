@@ -254,7 +254,7 @@ def start(terms,minPages,file = "prices.csv", mode="w"):
 
             for item in terms:
                 prices = getMedian(getAllPrices(item))
-                low10 = lambda x: str(int(x))+"€" if prices["pages"] > minPages else color.YELLOW + "Ignored" + color.END
+                eur = lambda x: str(int(x)) + " €"
                 if prices["pages"] > minPages:
                     writer.writerow({
                         'Artikel':item, 
@@ -269,7 +269,7 @@ def start(terms,minPages,file = "prices.csv", mode="w"):
                         item, str(prices["pages"]) + " Pages",color.YELLOW,"- "*10 + "  Ignored  " + " -"*10,color.END ))
                 else:
                     print("{:<33} | {:>17} | {:>10} | {:>10} | {:>10} | {:>10} | {:>11} ".format( 
-                        item, str(prices["pages"]) + " Pages", low10(prices["low10"]), low10(prices["avg"]), low10(prices["lowest"]) , low10(prices["median"]) , low10(prices["highest"])) )
+                        item, str(prices["pages"]) + " Pages", eur(prices["low10"]), eur(prices["avg"]), eur(prices["lowest"]) , eur(prices["median"]) , eur(prices["highest"])))
 
 
 def singleSearch(minpages,term,output="prices.csv",mode="a"):
