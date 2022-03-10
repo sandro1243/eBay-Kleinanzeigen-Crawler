@@ -33,7 +33,7 @@ forbidden = [
     "Gaming PC"
     ]
 
-
+scriptLocation = os.path.dirname(os.path.abspath(__file__))
 
 def lAnime():
    
@@ -309,15 +309,15 @@ if __name__ == "__main__":
                     help='Starts the Script in Default Mode (Reading from suche.txt and writing to prices.csv)')
     mode.add_argument('-search' , metavar="SEARCHTERM" , 
                     help='Starts a single search. By Deafault appends it to prices.csv')    
-    parser.add_argument('-o', "--output" , metavar="FILE", default="prices.csv",
+    parser.add_argument('-o', "--output" , metavar="FILE", default= scriptLocation + "prices.csv",
                     help='Defines the Output CSV')
-    parser.add_argument('-i', "--input" , metavar="FILE", default="search.txt",
+    parser.add_argument('-i', "--input" , metavar="FILE", default=scriptLocation + "/search.txt",
                     help='Defines the Input TXT File. One Search Term per Line. Supports Comments with #')
     parser.add_argument('-p', "--minpages" , default=3, type=int,
                     help='Minimum Pages found to be Included.')
     parser.add_argument('-a', "--append" , default="w", action='store_const' , const="a",
                     help='Append Mode. Default Overwrite Outputfile (Single Search appends by Default)')
-    parser.add_argument("-ignored" , metavar="FILE", default="ignored.txt",
+    parser.add_argument("-ignored" , metavar="FILE", default=scriptLocation + "/ignored.txt",
                     help='Defines an input File for Ignored words. One Word per Line. Example: Defect')
        
 
