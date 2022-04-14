@@ -20,6 +20,8 @@ class color:
    UNDERLINE = '\033[4m'
    END = '\033[0m'
 
+scriptLocation = os.path.dirname(os.path.abspath(__file__))
+
 
 header = {'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'}
 os.system("cls")
@@ -117,7 +119,7 @@ def start(file,target,lowPerc,highPerc,loc,maxpages,forbidden,message,maxkm):
                 km = result[0]
                 #if len(price[0]) > 0 : 
                 if price['price'] < (int(row[useTarget])*(highPerc/100)) and price['price'] > (int(row[useTarget])*(lowPerc/100)):
-                    if int(km) <= maxkm:
+                    if float(km) <= maxkm:
                         show(link=price['link'],price=price['price'],artikel=row["Artikel"],counter=counter,titel=price['title'],
                         desc=price['desc'],location=price['location'],target=useTarget,targetPrice=row[useTarget],message=message)
                     
@@ -173,7 +175,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Alarm Component of eBay Kleinanzeigen Crawler')
 
 #file,mode,lowPerc,highPerc
-    parser.add_argument('-i', "--input" , metavar="FILE", default="prices.csv",
+    parser.add_argument('-i', "--input" , metavar="FILE", default=scriptLocation+"/prices.csv",
                     help='Defines the Input File. Should be the Output CSV File of the Crawler Module. Default: prices.csv')
     parser.add_argument('-t', "--target" , choices=['avg', 'med', 'low10','csv'], default="low10",
                     help="Search for Average, Median or Low 10 Prices. You can Specify a Target for each Item in the CSV and use csv")  
@@ -187,7 +189,7 @@ if __name__ == "__main__":
                     help='Filter for Lowest Percentage of Target Price. Used to filter out Rubbish. Default: 20')
     parser.add_argument("-H" ,"--highest", metavar="80" , default=80,type=int,
                     help='Filter for Highest Percentage of Target Price. Default: 80')
-    parser.add_argument("-ignored" , metavar="FILE", default="ignored.txt",
+    parser.add_argument("-ignored" , metavar="FILE", default=scriptLocation+"/ignored.txt",
                     help='Defines an input File for Ignored words. One Word per Line. Example: Defect')
     parser.add_argument("-messagebox" ,"-m" , action="store_true",
                     help='Defines an input File for Ignored words. One Word per Line. Example: Defect')
